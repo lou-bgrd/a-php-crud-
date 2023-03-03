@@ -9,13 +9,16 @@
 </head>
 
 <body>
+    <header>
+        <?php
+
+        include './header.html'; ?>
+
+    </header>
     <br>
     <div class="container">
         <br>
-        <div class="row">
-            <br>
-            <h2>Crud en Php</h2>
-        </div>
+
         <br>
         <div class="row">
             <a href="add.php" class="btn btn-success">Ajouter un user</a>
