@@ -43,53 +43,29 @@
                         $sql = 'SELECT * FROM crud_table ORDER BY ID DESC'; //on formule notre requete 
                         foreach ($pdo->query($sql) as $row) {
                             //on cree les lignes du tableau avec chaque valeur retournée
-                            echo '
-<br>
-<tr>';
-                            echo '
-<td>' . $row['Name'] . '</td>
-';
-                            echo '
-<td>' . $row['Firstname'] . '</td>
-';
-                            echo '
-<td>' . $row['Age'] . '</td>
-';
-                            echo '
-<td>' . $row['Tel'] . '</td>
-';
-                            echo '
-<td>' . $row['Email'] . '</td>
-';
-                            echo '
-<td>' . $row['Pays'] . '</td>
-';
-                            echo '
-<td>' . $row['Comment'] . '</td>
-';
-                            echo '
-<td>' . $row['metier'] . '</td>
-';
-                            echo '
-<td>' . $row['URL'] . '</td>
-';
-                            echo '
-<td>';
-                            echo '<a class="btn" href="edit.php?ID=' . $row['ID'] . '">Read</a>'; // un autre td pour le bouton d'edition
-                            echo '</td>
-';
-                            echo '
-<td>';
-                            echo '<a class="btn btn-success" href="update.php?ID=' . $row['ID'] . '">Update</a>'; // un autre td pour le bouton d'update
-                            echo '</td>
-';
-                            echo '
-<td>';
-                            echo '<a class="btn btn-danger" href="delete.php?ID=' . $row['ID'] . ' ">Delete</a>'; // un autre td pour le bouton de suppression
-                            echo '</td>
-';
-                            echo '</tr>
-';
+                            echo '<br><tr>';
+                            echo '<td>' . $row['Name'] . '</td>';
+                            echo '<td>' . $row['Firstname'] . '</td>';
+                            echo '<td>' . $row['Age'] . '</td>';
+                            echo '<td>' . $row['Tel'] . '</td>';
+                            echo '<td>' . $row['Email'] . '</td>';
+                            echo '<td>' . $row['Pays'] . '</td>';
+                            echo '<td>' . $row['Comment'] . '</td>';
+                            echo '<td>' . $row['metier'] . '</td>';
+                            echo '<td>' . $row['URL'] . '</td>';
+                            echo '<td>';
+                            echo '<a class="btn" href="edit.php?ID=' . $row['ID'] . '">Read</a>';
+                            // un autre td pour le bouton d'edition    
+                            echo '</td>';
+                            echo '<td>';
+                            echo '<a class="btn btn-success" href="update.php?ID=' . $row['ID'] . '">Update</a>';
+                            // un autre td pour le bouton d'update                          
+                            echo '</td>';
+                            echo '<td>';
+                            echo '<a class="btn btn-danger" href="delete.php?ID=' . $row['ID'] . ' ">Delete</a>';
+                            // un autre td pour le bouton de suppression     
+                            echo '</td>';
+                            echo '</tr>';
                             Database::disconnect(); //on se deconnecte de la base
                             ;
                         }

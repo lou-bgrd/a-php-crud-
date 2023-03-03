@@ -1,13 +1,14 @@
 <?php require 'database.php';
 $id = 0;
-if (!empty($_GET['id'])) {
-    $id = $_REQUEST['id'];
+if (!empty($_GET['ID'])) {
+    $id = $_REQUEST['ID'];
+    
 }
 if (!empty($_POST)) {
     $id = $_POST['id'];
     $pdo = Database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "DELETE FROM crud_table  WHERE id = ?";
+    $sql = "DELETE FROM crud_table  WHERE ID = ?";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     Database::disconnect();
@@ -37,7 +38,7 @@ if (!empty($_POST)) {
                 <h3>Delete a user</h3>
             </div>
             <br>
-            <form class="form-horizontal" action="delete.php" method="post">
+            <form class="form-horizontal" action="delete.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 Are you sure to delete ?
                 <br>

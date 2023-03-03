@@ -1,8 +1,8 @@
 <?php require('database.php');
 //on appelle notre fichier de config 
 $id = null;
-if (!empty($_GET['id'])) {
-    $id = $_REQUEST['id'];
+if (!empty($_GET['ID'])) {
+    $id = $_REQUEST['ID'];
 }
 if (null == $id) {
     header("location:index.php");
@@ -10,7 +10,7 @@ if (null == $id) {
     //on lance la connection et la requete
     $pdo = Database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION) .
-        $sql = "SELECT * FROM crud_table where id =?";
+        $sql = "SELECT * FROM crud_table where ID =?";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     $data = $q->fetch(PDO::FETCH_ASSOC);

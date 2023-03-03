@@ -1,7 +1,7 @@
 <?php require 'database.php';
 $id = null;
-if (!empty($_GET['id'])) {
-    $id = $_REQUEST['id'];
+if (!empty($_GET['ID'])) {
+    $id = $_REQUEST['ID'];
 }
 if (null == $id) {
     header("Location: index.php");
