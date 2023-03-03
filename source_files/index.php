@@ -27,7 +27,7 @@
                     <thead>
                         <th>Name</th>
                         <th>Firstname</th>
-                        <th>Age</th>
+                        <th>Birth date</th>
                         <th>Tel</th>
                         <th>Pays</th>
                         <th>Email</th>
@@ -48,13 +48,13 @@
                             echo '<td>' . $row['Firstname'] . '</td>';
                             echo '<td>' . $row['Age'] . '</td>';
                             echo '<td>' . $row['Tel'] . '</td>';
-                            echo '<td>' . $row['Email'] . '</td>';
                             echo '<td>' . $row['Pays'] . '</td>';
+                            echo '<td>' . $row['Email'] . '</td>';
                             echo '<td>' . $row['Comment'] . '</td>';
                             echo '<td>' . $row['metier'] . '</td>';
                             echo '<td>' . $row['URL'] . '</td>';
                             echo '<td>';
-                            echo '<a class="btn" href="edit.php?ID=' . $row['ID'] . '">Read</a>';
+                            echo '<a class="btn btn-secondary" href="edit.php?ID=' . $row['ID'] . '">Read</a>';
                             // un autre td pour le bouton d'edition    
                             echo '</td>';
                             echo '<td>';

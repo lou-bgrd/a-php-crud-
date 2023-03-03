@@ -47,7 +47,7 @@ if (null == $id) {
                     <br>
                     <div class="controls">
                         <label class="checkbox">
-                            <?php echo $data['name']; ?>
+                            <?php echo $data['Name']; ?>
                         </label>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ if (null == $id) {
                     <br>
                     <div class="controls">
                         <label class="checkbox">
-                            <?php echo $data['firstname']; ?>
+                            <?php echo $data['Firstname']; ?>
                         </label>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ if (null == $id) {
                     <br>
                     <div class="controls">
                         <label class="checkbox">
-                            <?php echo $data['email']; ?>
+                            <?php echo $data['Email']; ?>
                         </label>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ if (null == $id) {
                     <br>
                     <div class="controls">
                         <label class="checkbox">
-                            <?php echo $data['tel']; ?>
+                            <?php echo $data['Tel']; ?>
                         </label>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ if (null == $id) {
                     <br>
                     <div class="controls">
                         <label class="checkbox">
-                            <?php echo $data['pays']; ?>
+                            <?php echo $data['Pays']; ?>
                         </label>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ if (null == $id) {
                     <br>
                     <div class="controls">
                         <label class="checkbox">
-                            <?php echo $data['url']; ?>
+                            <?php echo $data['URL']; ?>
                         </label>
                     </div>
                 </div>
@@ -117,13 +117,13 @@ if (null == $id) {
                     <br>
                     <div class="controls">
                         <label class="checkbox">
-                            <?php echo $data['comment']; ?>
+                            <?php echo $data['Comment']; ?>
                         </label>
                     </div>
                 </div>
                 <br>
                 <div class="form-actions">
-                    <a class="btn" href="index.php">Back</a>
+                    <a class="btn btn-secondary" href="index.php">Back</a>
                 </div>
             </div>
         </div>

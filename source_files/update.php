@@ -142,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) { // on initialise n
                 <label class="control-label">age</label>
                 <br>
                 <div class="controls">
-                    <input type="number" name="age" value="<?php echo !empty($age) ? $age : ''; ?>">
+                    <input type="date" name="age" value="<?php echo !empty($age) ? $age : ''; ?>">
                     <?php if (!empty($ageError)) : ?>
                         <span class="help-inline"><?php echo $ageError; ?></span>
                     <?php endif; ?>
