@@ -4,8 +4,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Crud en php</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 </head>
 
 <body>
@@ -21,23 +21,25 @@
 
         <br>
         <div class="row">
-            <a href="add.php" class="btn btn-success">Ajouter un user</a>
+            <a href="add.php"><button class="bg-emerald-700 rounded-full p-2 text-white">Ajouter un utilisateur</button></a>
             <br>
             <div class="table-responsive">
                 <br>
-                <table class="table table-hover table-bordered">
+                <table class="border-separate border border-slate-500 table-fixed border-separate">
                     <br>
                     <thead>
-                        <th>Name</th>
-                        <th>Firstname</th>
-                        <th>Birth date</th>
-                        <th>Tel</th>
-                        <th>Pays</th>
-                        <th>Email</th>
-                        <th>Comment</th>
-                        <th>metier</th>
-                        <th>Url</th>
-                        <th>Edition</th>
+                        <tr>
+                            <th class="border border-slate-600 p-2">Name</th>
+                            <th class="border border-slate-600 p-2">Firstname</th>
+                            <th class="border border-slate-600 p-2">Birth date</th>
+                            <th class="border border-slate-600 p-2">Tel</th>
+                            <th class="border border-slate-600 p-2">Pays</th>
+                            <th class="border border-slate-600 p-2">Email</th>
+                            <th class="border border-slate-600 p-2">Comment</th>
+                            <th class="border border-slate-600 p-2">metier</th>
+                            <th class="border border-slate-600 p-2">Url</th>
+                            <th class="border border-slate-600 p-2">Edition</th>
+                        </tr>
                     </thead>
                     <br>
                     <tbody>
@@ -46,17 +48,17 @@
                         $sql = 'SELECT * FROM crud_table ORDER BY ID DESC'; //on formule notre requete 
                         foreach ($pdo->query($sql) as $row) {
                             //on cree les lignes du tableau avec chaque valeur retournée
-                            echo '<br><tr>';
-                            echo '<td>' . $row['Name'] . '</td>';
-                            echo '<td>' . $row['Firstname'] . '</td>';
-                            echo '<td>' . $row['Age'] . '</td>';
-                            echo '<td>' . $row['Tel'] . '</td>';
-                            echo '<td>' . $row['Pays'] . '</td>';
-                            echo '<td>' . $row['Email'] . '</td>';
-                            echo '<td>' . $row['Comment'] . '</td>';
-                            echo '<td>' . $row['metier'] . '</td>';
-                            echo '<td>' . $row['URL'] . '</td>';
-                            echo '<td>';
+                            echo '<br><tr class="border border-slate-500">';
+                            echo '<td class="border border-slate-500">' .  $row['Name'] . '</td>';
+                            echo '<td class="border border-slate-500">' .  $row['Firstname'] . '</td>';
+                            echo '<td class="border border-slate-500">' .  $row['Age'] . '</td>';
+                            echo '<td class="border border-slate-500">' .  $row['Tel'] . '</td>';
+                            echo '<td class="border border-slate-500">' .  $row['Pays'] . '</td>';
+                            echo '<td class="border border-slate-500">' .  $row['Email'] . '</td>';
+                            echo '<td class="border border-slate-500">' .  $row['Comment'] . '</td>';
+                            echo '<td class="border border-slate-500">' .  $row['metier'] . '</td>';
+                            echo '<td class="border border-slate-500">' .  $row['URL'] . '</td>';
+                            echo '<td class="border border-slate-500">';
                             echo '<a class="btn btn-secondary" href="edit.php?ID=' . $row['ID'] . '">Read</a>';
                             // un autre td pour le bouton d'edition    
                             echo '</td>';
