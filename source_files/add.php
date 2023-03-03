@@ -74,7 +74,7 @@
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO user (name,firstname,age,tel, email, pays,comment, metier,url) values(?, ?, ?, ? , ? , ? , ? , ?, ?)";
+            $sql = "INSERT INTO crud_table (name,firstname,age,tel, email, pays,comment, metier,url) values(?, ?, ?, ? , ? , ? , ? , ?, ?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($name, $firstname, $age, $tel, $email, $pays, $comment, $metier, $url));
             Database::disconnect();

@@ -1,9 +1,21 @@
-<?php require('database.php'); //on appelle notre fichier de config $id = null; if (!empty($_GET['id'])) { $id = $_REQUEST['id']; } if (null == $id) { header("location:index.php"); } else { //on lance la connection et la requete $pdo = Database ::connect(); $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION) .
-$sql = "SELECT * FROM user where id =?";
-$q = $pdo->prepare($sql);
-$q->execute(array($id));
-$data = $q->fetch(PDO::FETCH_ASSOC);
-Database::disconnect();
+<?php require('database.php');
+//on appelle notre fichier de config 
+$id = null;
+if (!empty($_GET['id'])) {
+    $id = $_REQUEST['id'];
+}
+if (null == $id) {
+    header("location:index.php");
+} else {
+    //on lance la connection et la requete
+    $pdo = Database::connect();
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION) .
+        $sql = "SELECT * FROM crud_table where id =?";
+    $q = $pdo->prepare($sql);
+    $q->execute(array($id));
+    $data = $q->fetch(PDO::FETCH_ASSOC);
+    Database::disconnect();
+}
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -11,10 +23,12 @@ Database::disconnect();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <br>
     <div class="container">
@@ -116,4 +130,5 @@ Database::disconnect();
     </div>
     <!-- /container -->
 </body>
+
 </html>

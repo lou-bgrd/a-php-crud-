@@ -40,7 +40,7 @@
                     <tbody>
                         <?php include 'database.php'; //on inclut notre fichier de connection 
                         $pdo = Database::connect(); //on se connecte à la base 
-                        $sql = 'SELECT * FROM user ORDER BY id DESC'; //on formule notre requete 
+                        $sql = 'SELECT * FROM crud_table ORDER BY ID DESC'; //on formule notre requete 
                         foreach ($pdo->query($sql) as $row) {
                             //on cree les lignes du tableau avec chaque valeur retournée
                             echo '
@@ -75,17 +75,17 @@
 ';
                             echo '
 <td>';
-                            echo '<a class="btn" href="edit.php?id=' . $row['id'] . '">Read</a>'; // un autre td pour le bouton d'edition
+                            echo '<a class="btn" href="edit.php?ID=' . $row['ID'] . '">Read</a>'; // un autre td pour le bouton d'edition
                             echo '</td>
 ';
                             echo '
 <td>';
-                            echo '<a class="btn btn-success" href="update.php?id=' . $row['id'] . '">Update</a>'; // un autre td pour le bouton d'update
+                            echo '<a class="btn btn-success" href="update.php?ID=' . $row['ID'] . '">Update</a>'; // un autre td pour le bouton d'update
                             echo '</td>
 ';
                             echo '
 <td>';
-                            echo '<a class="btn btn-danger" href="delete.php?id=' . $row['id'] . ' ">Delete</a>'; // un autre td pour le bouton de suppression
+                            echo '<a class="btn btn-danger" href="delete.php?ID=' . $row['ID'] . ' ">Delete</a>'; // un autre td pour le bouton de suppression
                             echo '</td>
 ';
                             echo '</tr>
